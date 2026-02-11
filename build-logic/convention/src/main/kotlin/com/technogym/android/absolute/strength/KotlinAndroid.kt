@@ -31,9 +31,7 @@ internal fun Project.configureKotlinAndroid(
             targetCompatibility = JavaVersion.toVersion(project.projectJavaVersion)
         }
     }
-
     configureKotlin<KotlinAndroidProjectExtension>()
-
 }
 
 /**
