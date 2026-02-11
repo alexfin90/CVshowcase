@@ -11,8 +11,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply(libs.findPlugin("livestrength-library").get().get().pluginId)
-                apply(libs.findPlugin("livestrength-compose-navigation").get().get().pluginId)
+                apply(libs.findPlugin("cvshowcase-library").get().get().pluginId)
+                apply(libs.findPlugin("cvshowcase-compose-navigation").get().get().pluginId)
             }
 
             extensions.configure<LibraryExtension> {
@@ -26,6 +26,5 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             }
         }
     }
-
 }
 

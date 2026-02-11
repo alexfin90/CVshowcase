@@ -15,7 +15,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply(libs.findPlugin("android-library").get().get().pluginId)
                 apply(libs.findPlugin("kotlin-android").get().get().pluginId)
-                apply(libs.findPlugin("livestrength-hilt").get().get().pluginId)
+                apply(libs.findPlugin("cvshowcase-hilt").get().get().pluginId)
             }
 
             extensions.configure<LibraryExtension> {

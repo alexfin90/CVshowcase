@@ -23,6 +23,8 @@ ksp = "2.2.0-2.0.2"
 timber = "5.0.1"
 #Serialization
 serialization = "1.9.0"
+appcompat = "1.7.1"
+material = "1.13.0"
 
 [libraries]
 # Android
@@ -56,6 +58,8 @@ compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-
 
 #Serialization
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 # Android

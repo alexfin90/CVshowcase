@@ -29,14 +29,14 @@ setup.
 
 Current list of convention plugins:
 
-- [`livestrength-hilt`](convention/src/main/kotlin/HiltConventionPlugin.kt)
-- [`livestrength-compose-navigation`](convention/src/main/kotlin/ComposeNavigationConventionPlugin.kt)
-- [`livestrength-flavors`](convention/src/main/kotlin/AndroidApplicationFlavorsConventionPlugin.kt)
-- [`livestrength-crashlytics`](convention/src/main/kotlin/FirebaseCustomCrashlyticsConventionPlugin.kt)
-- [`livestrength-library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt)
-- [`livestrength-feature`](convention/src/main/kotlin/AndroidFeatureConventionPlugin.kt)
-- [`livestrength-application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt)
-- [`livestrength-jvm-library`](convention/src/main/kotlin/JvmLibraryConventionPlugin.kt)
+- [`cvshowcase-hilt`](convention/src/main/kotlin/HiltConventionPlugin.kt)
+- [`cvshowcase-compose-navigation`](convention/src/main/kotlin/ComposeNavigationConventionPlugin.kt)
+- [`cvshowcaseflavors`](convention/src/main/kotlin/AndroidApplicationFlavorsConventionPlugin.kt)
+- [`cvshowcase-crashlytics`](convention/src/main/kotlin/FirebaseCustomCrashlyticsConventionPlugin.kt)
+- [`cvshowcase-library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt)
+- [`cvshowcase-feature`](convention/src/main/kotlin/AndroidFeatureConventionPlugin.kt)
+- [`cvshowcase-application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt)
+- [`cvshowcase-jvm-library`](convention/src/main/kotlin/JvmLibraryConventionPlugin.kt)
 
 Utils resources used to implement it:
 https://www.jordanterry.co.uk/a-brief-look-at-gradles-convention-plugins
