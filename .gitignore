@@ -1,0 +1,53 @@
+# Gradle
+**/build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+.gradle/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystore (se mai lo usi localmente)
+*.jks
+*.keystore
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Node / Web (se mai integri roba web)
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Misc
+*.class
+*.py[cod]
+target/
+*.app
+*.exe
+*.war
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
