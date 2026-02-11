@@ -30,6 +30,8 @@ internal fun Project.configureKotlinAndroid(
             sourceCompatibility = JavaVersion.toVersion(project.projectJavaVersion)
             targetCompatibility = JavaVersion.toVersion(project.projectJavaVersion)
         }
+
+
     }
     configureKotlin<KotlinAndroidProjectExtension>()
 }
@@ -42,7 +44,6 @@ internal fun Project.configureKotlinJvm() {
         sourceCompatibility = JavaVersion.toVersion(project.projectJavaVersion)
         targetCompatibility = JavaVersion.toVersion(project.projectJavaVersion)
     }
-
     configureKotlin<KotlinJvmProjectExtension>()
 }
 
@@ -50,6 +51,10 @@ internal fun Project.configureKotlinJvm() {
  * Configure base Kotlin options
  */
 private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() = configure<T> {
+
+    //Config toolchain
+    jvmToolchain(project.projectJavaVersion.toInt())
+
     // Treat all Kotlin warnings as errors (disabled by default)
     // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
     val warningsAsErrors = providers.gradleProperty("warningsAsErrors").map {

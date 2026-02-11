@@ -6,12 +6,10 @@ plugins {
 android {
     namespace = project.applicationPackage
 
-    kotlin {
-        jvmToolchain(17)
-    }
     buildFeatures {
         compose = true
     }
+
 }
 
 dependencies {
