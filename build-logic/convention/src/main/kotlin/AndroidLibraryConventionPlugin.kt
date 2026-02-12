@@ -1,4 +1,3 @@
-
 import com.android.build.gradle.LibraryExtension
 import com.technogym.android.absolute.strength.configureFlavors
 import com.technogym.android.absolute.strength.configureKotlinAndroid
@@ -26,23 +25,16 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                add(
-                    "implementation",
-                    project.libs.findLibrary("timber").get().get().toString()
-                )
-                add(
-                    "testImplementation",
-                    project.libs.findLibrary("kotlin-test-junit").get().get().toString()
-                )
-                add(
-                    "implementation",
-                    project.libs.findLibrary("androidx-junit").get().get().toString()
-                )
-                add(
-                    "implementation",
-                    project.libs.findLibrary("androidx-espresso-core").get().get().toString()
-                )
+                add("implementation", libs.findLibrary("androidx-core-ktx").get())
+                add("implementation", libs.findLibrary("timber").get())
+
+                add("testImplementation", libs.findLibrary("junit").get())
+
+                add("androidTestImplementation", libs.findLibrary("androidx-junit").get())
+                add("androidTestImplementation", libs.findLibrary("androidx-espresso-core").get())
+
             }
         }
     }
 }
+

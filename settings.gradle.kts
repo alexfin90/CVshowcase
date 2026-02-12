@@ -22,5 +22,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Cvshowcase"
 include(":app")
-include(":core:designsystem,:core:common")
+include(":core:designsystem")
+include(":core:common")
 
