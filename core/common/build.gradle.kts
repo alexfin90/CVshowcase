@@ -4,7 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.alexfin90.common"
+    namespace = "$applicationPackage.$coreModuleName.$commonModuleName"
+
     compileSdk {
         version = release(36)
     }

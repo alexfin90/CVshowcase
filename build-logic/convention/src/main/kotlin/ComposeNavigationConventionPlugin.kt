@@ -13,7 +13,7 @@ class ComposeNavigationConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 //* Apply the Compose compiler plugin Starting in Kotlin 2.0, the Compose Compiler
                 // Gradle plugin is required when compose is enabled
-                val composeCompilerPlugin = libs.findPlugin("compose.compiler")
+                val composeCompilerPlugin = libs.findPlugin("kotlin.compose")
                 composeCompilerPlugin.get().apply {
                     if (isPresent) {
                         apply(this.get().pluginId)
@@ -32,6 +32,23 @@ class ComposeNavigationConventionPlugin : Plugin<Project> {
                 }
             }
             dependencies {
+
+                add(
+                    "implementation",
+                    platform(project.libs.findLibrary("androidx-compose-bom").get())
+                )
+                add("implementation", project.libs.findLibrary("androidx-compose-ui").get())
+                add(
+                    "implementation",
+                    project.libs.findLibrary("androidx-compose-ui-graphics").get()
+                )
+                add(
+                    "implementation", project.libs.findLibrary
+                        ("androidx-compose-ui-tooling-preview")
+                        .get()
+                )
+                add("implementation", project.libs.findLibrary("androidx-compose-material3").get())
+                add("implementation", project.libs.findLibrary("androidx-activity-compose").get())
                 add(
                     "implementation",
                     project.libs.findLibrary("androidx-navigation-compose").get().get().toString()
@@ -39,6 +56,25 @@ class ComposeNavigationConventionPlugin : Plugin<Project> {
                 add(
                     "implementation",
                     project.libs.findLibrary("kotlinx-serialization-json").get().get().toString()
+                )
+                add(
+                    "androidTestImplementation", platform(
+                        project.libs.findLibrary
+                            ("androidx-compose-bom").get()
+                    )
+                )
+                add(
+                    "androidTestImplementation", project.libs.findLibrary
+                        ("androidx-compose-ui-test-junit4").get()
+                )
+                add(
+                    "debugImplementation", project.libs.findLibrary
+                        ("androidx-compose-ui-tooling").get()
+                )
+                add(
+                    "debugImplementation", project.libs.findLibrary
+                        ("androidx-compose-ui-test-manifest")
+                        .get()
                 )
             }
             val applicationExtension = extensions.findByType<ApplicationExtension>()

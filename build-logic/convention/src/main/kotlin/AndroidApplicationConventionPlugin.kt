@@ -22,8 +22,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply(libs.findPlugin("android-application").get().get().pluginId)
                 apply(libs.findPlugin("kotlin-android").get().get().pluginId)
+                apply(libs.findPlugin("cvshowcase-compose-navigation").get().get().pluginId)
             }
-
 
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)

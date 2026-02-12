@@ -1,7 +1,9 @@
 import com.android.build.gradle.LibraryExtension
+import com.technogym.android.absolute.strength.commonModuleName
 import com.technogym.android.absolute.strength.coreModuleName
+import com.technogym.android.absolute.strength.designSystemModuleName
 import com.technogym.android.absolute.strength.libs
-import com.technogym.android.absolute.strength.uiCommonModuleName
+
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -21,7 +23,11 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             dependencies {
                 add(
                     "implementation",
-                    project(":${project.coreModuleName}:${project.uiCommonModuleName}")
+                    project(":${project.coreModuleName}:${project.commonModuleName}")
+                )
+                add(
+                    "implementation",
+                    project(":${project.coreModuleName}:${project.designSystemModuleName}")
                 )
             }
         }

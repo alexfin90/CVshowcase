@@ -41,3 +41,15 @@ var Project.versionCode: Int
         propertiesFile.writeText(updatedContent)
     }
 
+val Project.coreModuleName: String
+    get() = findProperty("coreModuleName") as? String
+        ?: error("Property 'coreModuleName' not found")
+
+val Project.commonModuleName: String
+    get() = findProperty("commonModuleName") as? String
+        ?: error("Property 'commonModuleName' not found")
+
+val Project.designSystemModuleName: String
+    get() = findProperty("designSystemModuleName") as? String
+        ?: error("Property 'designSystemModuleName' not found")
+

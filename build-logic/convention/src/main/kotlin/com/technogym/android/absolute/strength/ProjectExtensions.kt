@@ -59,8 +59,10 @@ val Project.commonModuleName: String
     get() = findProperty("commonModuleName") as? String
         ?: error("Property 'commonModuleName' not found")
 
-val Project.uiCommonModuleName: String
-    get() = findProperty("uiCommonModuleName") as? String
-        ?: error("Property 'uiCommonModuleName' not found")
+val Project.designSystemModuleName: String
+    get() = findProperty("designSystemModuleName") as? String
+        ?: error("Property 'designSystemModuleName' not found")
+
+
 
 
