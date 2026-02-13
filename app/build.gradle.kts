@@ -11,7 +11,12 @@ android {
 
 
 dependencies{
+    //App dependencies
+    implementation(project(":$coreModuleName:$designSystemModuleName"))
+    implementation(project(":$coreModuleName:$commonModuleName"))
+    //Feature module dependencies
     implementation(platform(libs.firebase.bom))
+    //Others dependencies
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics)
     implementation(libs.google.firebase.analytics)
