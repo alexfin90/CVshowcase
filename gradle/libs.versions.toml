@@ -32,6 +32,7 @@ coilCompose = "3.3.0"
 coilNetworkOkhttp = "3.3.0"
 #Firebase
 firebase-bom = "34.9.0"
+crashlytics = "3.0.6"
 
 [libraries]
 # Android
@@ -68,6 +69,8 @@ timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 #Firebase
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -89,6 +92,8 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 #Google services
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+#Crashlytics
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics" }
 #Cvshowcase Custom Plugins
 cvshowcase-application = { id = "cvshowcase.application" }
 cvshowcase-library = { id = "cvshowcase.library" }
