@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "$applicationPackage.$coreModuleName.$commonModuleName"
 }
+
+dependencies{
+    api(project(":$coreModuleName:$dispatcherModuleName"))
+}

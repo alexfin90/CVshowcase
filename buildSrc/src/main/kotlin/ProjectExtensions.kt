@@ -53,6 +53,10 @@ val Project.designSystemModuleName: String
     get() = findProperty("designSystemModuleName") as? String
         ?: error("Property 'designSystemModuleName' not found")
 
+val Project.dispatcherModuleName: String
+    get() = findProperty("dispatcherModuleName") as? String
+        ?: error("Property 'dispatcherModuleName' not found")
+
 val Project.featureModuleName: String
     get() = findProperty("featureModuleName") as? String
         ?: error("Property 'featureModuleName' not found")
