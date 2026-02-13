@@ -9,7 +9,6 @@ android {
     namespace = project.applicationPackage
 }
 
-
 dependencies{
     //App dependencies
     implementation(project(":$coreModuleName:$designSystemModuleName"))

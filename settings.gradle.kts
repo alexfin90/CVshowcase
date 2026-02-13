@@ -24,4 +24,7 @@ rootProject.name = "Cvshowcase"
 include(":app")
 include(":core:designsystem")
 include(":core:common")
-
+include(":feature:profile")
+include(":feature:experience")
+include(":feature:skills")
+include(":feature:education")
