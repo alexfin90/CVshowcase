@@ -10,6 +10,8 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.3"
+#Google Services
+googleServices = "4.4.4"
 #Compose
 composeBom = "2024.09.00"
 navigationCompose = "2.9.3"
@@ -25,9 +27,11 @@ timber = "5.0.1"
 serialization = "1.9.0"
 appcompat = "1.7.1"
 material = "1.13.0"
-# ImageLoader
+#ImageLoader
 coilCompose = "3.3.0"
 coilNetworkOkhttp = "3.3.0"
+#Firebase
+firebase-bom = "34.9.0"
 
 [libraries]
 # Android
@@ -50,25 +54,24 @@ androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-te
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
-
 #Dependency Injection
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 javax-inject = { group = "javax.inject", name = "javax.inject", version.ref = "javaInject" }
-
+#Serialization
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+#ImageLoader
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilNetworkOkhttp" }
+#Logger
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+#Firebase
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
-
-#Serialization
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
-
-# ImageLoader
-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
-coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilNetworkOkhttp" }
-# Logger
-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 [plugins]
 # Android
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -84,6 +87,8 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 #Kotlin Serialization
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+#Google services
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 #Cvshowcase Custom Plugins
 cvshowcase-application = { id = "cvshowcase.application" }
 cvshowcase-library = { id = "cvshowcase.library" }
