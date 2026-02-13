@@ -1,15 +1,322 @@
 {
   "profile": {
-    "name": "Mario Rossi",
-    "title": "Android Developer",
-    "summary": "Kotlin Multiplatform & Firebase expert",
-    "skills": ["Kotlin", "Compose Multiplatform", "Firebase", "Retrofit"],
-    "experience": [
-      {
-        "company": "Technogym",
-        "role": "Senior Android Dev",
-        "period": "2024 - Present"
-      }
+    "fullName": "Alessandro Finocchiaro",
+    "title": "Senior Android Engineer | Tech Lead | Kotlin & Compose Specialist | CSM | CSPO",
+    "location": "Remote, Italy",
+    "profileImageUrl": "https://cvshowcase-c7ebb.web.app/alex.jpeg",
+    "professionalSummary": "Results-driven Senior Android Engineer with 10+ years architecting and leading enterprise-scale mobile applications for 100M+ active user bases. Specialized in Kotlin, Jetpack Compose, and Clean Architecture with proven expertise in team leadership, code modernization, and technical strategy. Passionate about building scalable, maintainable systems and mentoring high-performing engineering teams.",
+    "keyStrengths": [
+      "Enterprise-scale Android architecture (MVVM, Clean Code, modular design)",
+      "Kotlin/Compose expert with modern reactive patterns (Flow, Coroutines)",
+      "Technical leadership and team mentoring (CSM, CSPO certified)",
+      "CI/CD automation and DevOps optimization",
+      "Agile transformation and process optimization",
+      "Blockchain/DeFi knowledge (secondary specialization)",
+      "AI Development Tools: Claude (Code), GitHub Copilot, Cursor, Antigravity"
+    ],
+    "phoneNumber": "+39 3471968509",
+    "email": "alexfinocchiaro90@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/alexfinocchiaro",
+    "githubUrl": "https://github.com/alexfin90",
+    "cvAppUrl": ""
+  },
+  "education": [
+    {
+      "degree": "MSc in Computer Engineering",
+      "institution": "Università degli Studi di Catania",
+      "grade": "110/110 summa cum laude",
+      "period": "2014 - 2016",
+      "location": "Catania, Italy",
+      "logoUrl": "https://cvshowcase-c7ebb.web.app/logos/unict.png"
+    },
+    {
+      "degree": "BSc in Computer Engineering",
+      "institution": "Università degli Studi di Catania",
+      "grade": "110/110",
+      "period": "2011 - 2014",
+      "location": "Catania, Italy",
+      "logoUrl": "https://cvshowcase-c7ebb.web.app/logos/unict.png"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Italian",
+      "level": "Native / Fluent",
+      "score": 5,
+      "maxScore": 5
+    },
+    {
+      "name": "English",
+      "level": "Advanced",
+      "score": 4,
+      "maxScore": 5
+    },
+    {
+      "name": "Spanish",
+      "level": "Intermediate",
+      "score": 2,
+      "maxScore": 5
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified ScrumMaster (CSM)",
+      "issuer": "Scrum Alliance",
+      "type": "Agile / Scrum"
+    },
+    {
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "type": "Agile / Product"
+    },
+    {
+      "name": "Associate Cloud Engineer",
+      "issuer": "Google Cloud",
+      "type": "Cloud"
+    },
+    {
+      "name": "Salesforce Certified Platform Developer I",
+      "issuer": "Salesforce",
+      "type": "Salesforce"
+    },
+    {
+      "name": "Salesforce Certified Administrator",
+      "issuer": "Salesforce",
+      "type": "Salesforce"
+    }
+  ],
+  "coreTechnicalCompetencies": {
+    "languages": [
+      "Kotlin",
+      "Java",
+      "C/C++",
+      "SQL",
+      "Typescript",
+      "Python"
+    ],
+    "uiFrameworks": [
+      "Jetpack Compose",
+      "Material Design",
+      "Atomic Design Systems",
+      "Android Views",
+      "Flutter",
+      "Ionic"
+    ],
+    "architectureAndPatterns": [
+      "Clean Architecture",
+      "MVVM",
+      "MVI",
+      "MVP",
+      "Repository Pattern",
+      "Dependency Injection",
+      "SOLID Principles"
+    ],
+    "reactiveProgramming": [
+      "Kotlin Flow",
+      "LiveData",
+      "Coroutines",
+      "RxJava",
+      "RxKotlin"
+    ],
+    "dependencyInjection": [
+      "Hilt",
+      "Dagger2",
+      "Koin"
+    ],
+    "networkingAndData": [
+      "Retrofit",
+      "OkHttp",
+      "Firebase",
+      "Room",
+      "SQLite",
+      "Realm"
+    ],
+    "devOpsAndBuild": [
+      "GitHub Actions",
+      "Gradle (conventions/plugins)",
+      "CI/CD pipelines",
+      "GitHub",
+      "Bitbucket",
+      "GitLab",
+      "Fastlane"
+    ],
+    "testing": [
+      "Unit Testing (JUnit, Mockito)",
+      "UI Testing (Espresso)",
+      "Device Automation",
+      "Robot Testing",
+      "Firebase Test Lab"
+    ],
+    "cloudAndBackend": [
+      "Google Cloud Platform",
+      "Firebase",
+      "Azure DevOps",
+      "Salesforce"
+    ],
+    "toolsAndIDEs": [
+      "Android Studio",
+      "Xcode",
+      "VS Code",
+      "Jira",
+      "Confluence",
+      "Figma",
+      "Sketch"
+    ],
+    "aiDevelopmentTools": [
+      "Claude (Code)",
+      "GitHub Copilot",
+      "Cursor",
+      "Antigravity"
     ]
-  }
+  },
+  "experience": [
+    {
+      "title": "Senior Android Engineer",
+      "company": "Technogym",
+      "companyLogoUrl": "https://cvshowcase-c7ebb.web.app/logos/technogym.png",
+      "companyWebsiteUrl": "https://www.technogym.com",
+      "team": "Strength Team (Biostrength & Biocircuit)",
+      "period": "May 2024 - Present",
+      "location": "Remote, Italy",
+      "impact": "Led architectural modernization of embedded fitness OS powering Technogym's AI-driven strength machines (Biostrength/Biocircuit) serving premium fitness facilities globally.",
+      "keyAchievements": [
+        "Consolidated multiple legacy apps into a single mono-app (mono repo) with progressive Jetpack Compose migration, reducing maintenance overhead by 50% and enhancing cross-product consistency.",
+        "Refactored internal libraries using Kotlin Flow and reactive patterns, improving sensor data reliability and simplifying complex business logic for real-time biodata processing.",
+        "Built a shared UI repository with a custom atomic design system across Cardio & Strength teams, enabling 50% faster feature development and brand alignment across products.",
+        "Implemented GitHub Actions pipelines with device-based robotic testing, achieving 35% faster release cycles and improved code quality on embedded platforms.",
+        "Centralized Gradle convention plugins and multi-module setup, standardizing the approach across 8+ product lines and reducing onboarding time by 25%.",
+        "Mentored the team using CSM/CSPO expertise, optimizing sprint ceremonies and backlog refinement, resulting in 25% faster AI feature delivery."
+      ],
+      "apps": [
+        {
+          "name": "Biostrength",
+          "platform": "Web / Embedded experience",
+          "url": "https://www.technogym.com/en-SA/biostrength/",
+          "role": "Senior Android Engineer (embedded OS & experience)"
+        }
+      ],
+      "techStack": [
+        "Kotlin",
+        "Flow",
+        "Coroutines",
+        "Jetpack Compose",
+        "Android SDK/NDK",
+        "GitHub Actions",
+        "Gradle conventions",
+        "Android Media3",
+        "Clean Code"
+      ]
+    },
+    {
+      "title": "Team Lead - Android Engineer",
+      "company": "TIM Telecom Italia",
+      "companyLogoUrl": "https://cvshowcase-c7ebb.web.app/logos/tim.png",
+      "companyWebsiteUrl": "https://www.gruppotim.it/it.html",
+      "period": "July 2019 - May 2024",
+      "location": "Remote / Milan / Turin, Italy",
+      "impact": "Led Android development strategy for TIM’s mobile ecosystem (MyTIM, TIM Pay, TIMpersonal), powering digital experiences for over 20M+ active users.",
+      "keyAchievements": [
+        "Progressed from Senior Engineer to Project Leader, managing Android teams and technical direction for consumer apps with 99.5% uptime SLA.",
+        "Transitioned legacy codebases to Kotlin and Clean Architecture, improving maintainability and reducing critical bugs by 30%.",
+        "Led development of TIM Pay (with Hype/Banca Sella), achieving 500K+ downloads, 4.6★ rating, full Kotlin implementation, and secure payment integration.",
+        "Architected MyTIM core redesign, driving major performance and reliability improvements for Italy’s most-used telecom app.",
+        "Mentored engineers and led sprint planning, code reviews, and interviews to build high-performing mobile squads.",
+        "Coordinated Google Play releases and alignment across product, design, and backend teams."
+      ],
+      "apps": [
+        {
+          "name": "MyTIM",
+          "platform": "Android",
+          "url": "https://play.google.com/store/apps/details?id=it.telecomitalia.centodiciannove",
+          "role": "Lead Android Engineer"
+        },
+        {
+          "name": "TIM Pay (Hype)",
+          "platform": "Android",
+          "url": "https://play.google.com/store/apps/details?id=it.hype.app",
+          "role": "Lead Android Engineer (TIM Pay integration)"
+        },
+        {
+          "name": "TIMpersonal",
+          "platform": "Android",
+          "url": "",
+          "role": "Senior Android Engineer / Tech Lead"
+        }
+      ],
+      "techStack": [
+        "Kotlin",
+        "MVVM",
+        "Clean Architecture",
+        "RxJava",
+        "Retrofit",
+        "Google Maps API",
+        "Firebase",
+        "Android Jetpack",
+        "Clean Code principles"
+      ]
+    },
+    {
+      "title": "Consultant and Mobile Engineer",
+      "company": "Deloitte Digital",
+      "companyLogoUrl": "https://cvshowcase-c7ebb.web.app/logos/deloitte.png",
+      "companyWebsiteUrl": "https://www.deloittedigital.com/us/en.html",
+      "period": "September 2016 - May 2019",
+      "location": "Milan, Italy",
+      "impact": "Delivered full-cycle mobile solutions for Fortune 500 companies across utilities, automotive, and consumer sectors.",
+      "keyAchievements": [
+        "Developed Android, Ionic, React Native, and Flutter solutions for high-profile clients.",
+        "Served as Tech Lead on RFPs, cost estimations, and architecture decisions, contributing to winning over €2M in projects.",
+        "Participated in DroidCon and CodeMotion as speaker/organizer, increasing the firm's technical visibility.",
+        "Architected E.ON B2C mobile app handling millions of IoT device interactions.",
+        "Contributed to Lamborghini Unica connected car companion app for premium automotive experiences.",
+        "Designed architecture for Estra Mobile App, an energy utilities customer engagement platform."
+      ],
+      "apps": [
+        {
+          "name": "E.ON B2C Mobile",
+          "platform": "Android",
+          "url": "https://play.google.com/store/apps/details?id=com.eonenergia.eon",
+          "role": "Android Architect"
+        },
+        {
+          "name": "Lamborghini Unica",
+          "platform": "Android",
+          "url": "https://www.lamborghini.com/it-en/servizi-al-cliente/app-clienti#val-ht",
+          "role": "Android Engineer"
+        },
+        {
+          "name": "Estra Mobile App",
+          "platform": "Android",
+          "url": "https://play.google.com/store/apps/details?id=it.estraspa.areaclienti",
+          "role": "Mobile Architect"
+        }
+      ],
+      "techStack": [
+        "Android",
+        "Ionic",
+        "React Native",
+        "Flutter",
+        "Java",
+        "Firebase",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "University Internship",
+      "company": "STMicroelectronics",
+      "companyLogoUrl": "https://cvshowcase-c7ebb.web.app/logos/stmicroelectronics.png",
+      "companyWebsiteUrl": "https://www.st.com/content/st_com/en.html",
+      "period": "April 2015 - September 2015",
+      "location": "Catania, Italy",
+      "impact": "Worked on performance optimization via static and dynamic code analysis on embedded systems and mobile applications.",
+      "keyAchievements": [],
+      "apps": [],
+      "techStack": [
+        "Embedded systems",
+        "Performance profiling",
+        "Static analysis",
+        "Dynamic analysis"
+      ]
+    }
+  ]
 }
