@@ -8,6 +8,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    api(libs.androidx.appcompat)
+    api(libs.material)
 }

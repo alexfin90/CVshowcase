@@ -14,8 +14,12 @@ dependencies{
     implementation(project(":$coreModuleName:$designSystemModuleName"))
     implementation(project(":$coreModuleName:$commonModuleName"))
     //Feature module dependencies
-    implementation(platform(libs.firebase.bom))
+    implementation(project(":$featureModuleName:$profileModuleName"))
+    implementation(project(":$featureModuleName:$skillsModuleName"))
+    implementation(project(":$featureModuleName:$educationModuleName"))
+    implementation(project(":$featureModuleName:$experienceModuleName"))
     //Others dependencies
+    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics)
     implementation(libs.google.firebase.analytics)

@@ -53,3 +53,22 @@ val Project.designSystemModuleName: String
     get() = findProperty("designSystemModuleName") as? String
         ?: error("Property 'designSystemModuleName' not found")
 
+val Project.featureModuleName: String
+    get() = findProperty("featureModuleName") as? String
+        ?: error("Property 'featureModuleName' not found")
+
+val Project.educationModuleName: String
+    get() = findProperty("educationModuleName") as? String
+        ?: error("Property 'educationModuleName' not found")
+
+val Project.profileModuleName: String
+    get() = findProperty("profileModuleName") as? String
+        ?: error("Property 'profileModuleName' not found")
+
+val Project.skillsModuleName: String
+    get() = findProperty("skillsModuleName") as? String
+        ?: error("Property 'skillsModuleName' not found")
+
+val Project.experienceModuleName: String
+    get() = findProperty("experienceModuleName") as? String
+        ?: error("Property 'experienceModuleName' not found")
