@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "name": "Mario Rossi",
+    "title": "Android Developer",
+    "summary": "Kotlin Multiplatform & Firebase expert",
+    "skills": ["Kotlin", "Compose Multiplatform", "Firebase", "Retrofit"],
+    "experience": [
+      {
+        "company": "Technogym",
+        "role": "Senior Android Dev",
+        "period": "2024 - Present"
+      }
+    ]
+  }
+}
