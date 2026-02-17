@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "$applicationPackage.$featureModuleName.$skillsModuleName"
 }
+
+dependencies{
+    implementation(project(":$coreModuleName:$coreDomainModuleName"))
+}

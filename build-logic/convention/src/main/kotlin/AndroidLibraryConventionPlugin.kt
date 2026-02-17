@@ -18,6 +18,9 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             }
 
             extensions.configure<LibraryExtension> {
+                buildFeatures {
+                    buildConfig = true
+                }
                 configureKotlinAndroid(this)
                 defaultConfig.testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                 testOptions.animationsDisabled = true
@@ -25,6 +28,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
+
                 add("implementation", libs.findLibrary("androidx-core-ktx").get())
                 add("implementation", libs.findLibrary("timber").get())
 

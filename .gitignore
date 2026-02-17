@@ -49,10 +49,6 @@ target/
 *.flv
 *.mov
 *.wmv
-
-#Firebase
-app/google-services.json
-
 .firebase/
 public/cv.json
 

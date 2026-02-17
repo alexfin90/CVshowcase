@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "475758253268",
+    "project_id": "cvshowcase-c7ebb",
+    "storage_bucket": "cvshowcase-c7ebb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475758253268:android:0dfaf695b9b9e696821741",
+        "android_client_info": {
+          "package_name": "com.alexfin90.cvshowcase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHvJwf8f1jOsLHQlhGo5pnUEdLLYRrREA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475758253268:android:e68fb6ba1da4d384821741",
+        "android_client_info": {
+          "package_name": "com.alexfin90.cvshowcase.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHvJwf8f1jOsLHQlhGo5pnUEdLLYRrREA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
