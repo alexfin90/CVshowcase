@@ -1,4 +1,4 @@
-package com.alexfin90.cvshowcase.ui.theme
+package com.alexfin90.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
