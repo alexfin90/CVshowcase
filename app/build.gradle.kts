@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.cvshowcase.application)
     alias(libs.plugins.cvshowcase.flavors)
+    alias(libs.plugins.cvshowcase.hilt)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
 }
@@ -13,6 +14,7 @@ dependencies{
     //App dependencies
     implementation(project(":$coreModuleName:$designSystemModuleName"))
     implementation(project(":$coreModuleName:$commonModuleName"))
+    implementation(project(":$coreModuleName:$coreDataModuleName"))
     //Feature module dependencies
     implementation(project(":$featureModuleName:$profileModuleName"))
     implementation(project(":$featureModuleName:$skillsModuleName"))

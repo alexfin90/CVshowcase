@@ -4,14 +4,16 @@ import android.app.Application
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy.Builder
 import android.os.StrictMode.VmPolicy
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class CvApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         setStrictModePolicy()
+        //TODO Timber
     }
 }
-
 
 /**
  * Set a thread policy that detects all potential problems on the main thread, such as network
