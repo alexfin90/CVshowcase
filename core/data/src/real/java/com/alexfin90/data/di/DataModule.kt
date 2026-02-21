@@ -1,5 +1,6 @@
 package com.alexfin90.data.di
 
+import com.alexfin90.data.di.repository.CvRepositoryImpl
 import com.alexfin90.domain.contracts.CvRepository
 import dagger.Binds
 import dagger.Module
