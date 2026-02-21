@@ -1,14 +1,15 @@
 package com.alexfin90.experience
 
 
-import androidx.compose.runtime.Stable
 import com.alexfin90.experience.models.ExperienceUiModel
+import kotlinx.collections.immutable.PersistentList
+import kotlinx.collections.immutable.persistentListOf
 
-@Stable
+
 data class ExperienceScreenState (
     val isLoading: Boolean = false,
     val error: String? = null,
     val query : String = "",
-    val items: List<ExperienceUiModel> = emptyList(),
-    val filtered: List<ExperienceUiModel> = emptyList()
+    val items: PersistentList<ExperienceUiModel> = persistentListOf(),
+    val filtered: PersistentList<ExperienceUiModel> = persistentListOf()
 )

@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.alexfin90.experience.models.ExperienceUiModel
+import kotlinx.collections.immutable.persistentListOf
 
 @Composable
 fun ExperienceScreen(
@@ -165,7 +166,7 @@ fun ExperienceItemPreview() {
 fun ExperienceContentPreview() {
     val sampleState = ExperienceScreenState(
         query = "",
-        items = listOf(
+        items = persistentListOf(
             ExperienceUiModel(
                 title = "Senior Android Developer",
                 company = "Google",
@@ -182,7 +183,7 @@ fun ExperienceContentPreview() {
                 companyLogoURl = ""
             )
         ),
-        filtered = listOf(
+        filtered = persistentListOf(
             ExperienceUiModel(
                 title = "Senior Android Developer",
                 company = "Google",

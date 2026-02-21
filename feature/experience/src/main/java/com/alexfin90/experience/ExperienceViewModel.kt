@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.alexfin90.domain.usecases.ObserveCvUseCase
 import com.alexfin90.experience.mappers.toUiModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.collections.immutable.toPersistentList
+import kotlinx.collections.immutable.toPersistentSet
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -30,7 +32,7 @@ class ExperienceViewModel @Inject constructor(
 
     private val queryFlow = MutableStateFlow("")
 
-    companion object{
+    companion object {
         private const val DEBOUNCE_TIME = 500L
         private val TAG = ExperienceViewModel::javaClass.name
     }
@@ -42,8 +44,8 @@ class ExperienceViewModel @Inject constructor(
                 _uiState.update { currentState ->
                     currentState.copy(
                         isLoading = true,
-                        items = cv.experiences.map { it.toUiModel() },
-                        filtered = cv.experiences.map { it.toUiModel() }
+                        items = cv.experiences.map { it.toUiModel() }.toPersistentList(),
+                        filtered = cv.experiences.map { it.toUiModel() }.toPersistentList()
                     )
                 }
             }
@@ -67,7 +69,7 @@ class ExperienceViewModel @Inject constructor(
         val filtered = _uiState.value.items.filter { exp ->
             exp.company.lowercase().contains(q) ||
                     exp.title.lowercase().contains(q)
-        }
+        }.toPersistentList()
         _uiState.update { currentState ->
             currentState.copy(filtered = filtered)
         }
