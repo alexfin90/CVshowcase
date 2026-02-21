@@ -40,7 +40,6 @@ fun ExperienceScreen(
             state = state,
             onQueryChange = viewModel::onQueryChange
         )
-
         state.isLoading -> LoadingScreen(modifier = modifier)
         state.error != null -> ErrorButton(error = state.error, modifier = modifier)
     }

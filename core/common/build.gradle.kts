@@ -21,4 +21,5 @@ android {
 
 dependencies{
     api(project(":$coreModuleName:$dispatcherModuleName"))
+    api(libs.kotlinx.collections.immutable)
 }

@@ -1,9 +1,10 @@
 package com.alexfin90.experience
 
-import androidx.compose.runtime.Immutable
+
+import androidx.compose.runtime.Stable
 import com.alexfin90.experience.models.ExperienceUiModel
 
-@Immutable
+@Stable
 data class ExperienceScreenState (
     val isLoading: Boolean = false,
     val error: String? = null,
