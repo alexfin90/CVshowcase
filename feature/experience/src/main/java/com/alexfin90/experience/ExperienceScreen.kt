@@ -22,9 +22,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.alexfin90.experience.models.ExperienceUiModel
 
 @Composable
 fun ExperienceScreen(
@@ -35,8 +37,8 @@ fun ExperienceScreen(
     when {
         state.items.isNotEmpty() -> ExperienceContent(
             modifier = modifier,
-            viewModel = viewModel,
-            state = state
+            state = state,
+            onQueryChange = viewModel::onQueryChange
         )
 
         state.isLoading -> LoadingScreen(modifier = modifier)
@@ -46,9 +48,9 @@ fun ExperienceScreen(
 
 @Composable
 fun ExperienceContent(
-    modifier: Modifier,
-    viewModel: ExperienceViewModel,
-    state: ExperienceScreenState
+    modifier: Modifier = Modifier,
+    state: ExperienceScreenState,
+    onQueryChange: (String) -> Unit = {}
 ) {
     Column(
         modifier = modifier
@@ -61,7 +63,7 @@ fun ExperienceContent(
                 .fillMaxWidth()
                 .padding(10.dp),
             value = state.query,
-            onValueChange = viewModel::onQueryChange,
+            onValueChange = onQueryChange,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
             leadingIcon = {
@@ -90,6 +92,7 @@ fun ExperienceItem(companyName: String, title: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.secondary)
             .padding(10.dp)
     ) {
         Text(text = companyName, style = MaterialTheme.typography.bodyLarge)
@@ -137,5 +140,69 @@ fun ErrorButton(error: String?, modifier: Modifier = Modifier) {
         }
     }
 }
+
+@Preview
+@Composable
+fun ErrorButtonPreview() {
+    ErrorButton(error = "Something went wrong")
+}
+
+@Preview
+@Composable
+fun LoadingScreenPreview() {
+    LoadingScreen()
+}
+
+@Preview
+@Composable
+fun ExperienceItemPreview() {
+    Box {
+        ExperienceItem("Google", "Senior Android Developer")
+    }
+}
+
+@Preview()
+@Composable
+fun ExperienceContentPreview() {
+    val sampleState = ExperienceScreenState(
+        query = "",
+        items = listOf(
+            ExperienceUiModel(
+                title = "Senior Android Developer",
+                company = "Google",
+                companyLogoURl = ""
+            ),
+            ExperienceUiModel(
+                title = "Android Developer",
+                company = "Meta",
+                companyLogoURl = ""
+            ),
+            ExperienceUiModel(
+                title = "Junior Android Developer",
+                company = "Amazon",
+                companyLogoURl = ""
+            )
+        ),
+        filtered = listOf(
+            ExperienceUiModel(
+                title = "Senior Android Developer",
+                company = "Google",
+                companyLogoURl = ""
+            ),
+            ExperienceUiModel(
+                title = "Android Developer",
+                company = "Meta",
+                companyLogoURl = ""
+            ),
+            ExperienceUiModel(
+                title = "Junior Android Developer",
+                company = "Amazon",
+                companyLogoURl = ""
+            )
+        )
+    )
+    ExperienceContent(state = sampleState)
+}
+
 
 
