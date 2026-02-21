@@ -27,7 +27,9 @@ class MainActivity : ComponentActivity() {
                     topBar = { }
                 ) { innerPadding ->
                     //TODO NAV HOST
-                     ExperienceScreen(modifier = Modifier.padding(paddingValues = innerPadding))
+                    ExperienceScreen(
+                        modifier = Modifier.padding(paddingValues = innerPadding)
+                    )
                 }
             }
         }

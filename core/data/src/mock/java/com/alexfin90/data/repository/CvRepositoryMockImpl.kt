@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class CvRepositoryMockImpl @Inject constructor() : CvRepository {
 
-    private val cv = Cv(
+    private var cv = Cv(
         experiences = listOf(Experience(
             title = "Senior Android Developer",
             company = "Google",
@@ -23,6 +23,8 @@ class CvRepositoryMockImpl @Inject constructor() : CvRepository {
         profile = Profile(),
         language = Language()
     )
+
+
 
     override suspend fun getCv(): Cv {
         return cv

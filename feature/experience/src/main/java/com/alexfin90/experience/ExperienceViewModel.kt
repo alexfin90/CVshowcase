@@ -21,7 +21,6 @@ class ExperienceViewModel @Inject constructor(
     observeCvUseCase: ObserveCvUseCase,
 ) : ViewModel() {
 
-
     private val _uiState = MutableStateFlow(ExperienceScreenState())
     val uiState = _uiState.asStateFlow()
 
@@ -31,7 +30,7 @@ class ExperienceViewModel @Inject constructor(
             .onEach { cv ->
                 _uiState.update { currentState ->
                     currentState.copy(
-                        isLoading = false,
+                        isLoading = true,
                         items = cv.experiences.map { it.toUiModel() },
                         filtered = cv.experiences.map { it.toUiModel() }
                     )
