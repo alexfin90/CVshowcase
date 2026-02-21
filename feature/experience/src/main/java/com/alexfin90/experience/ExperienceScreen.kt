@@ -1,45 +1,49 @@
 package com.alexfin90.experience
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.alexfin90.designsystem.theme.CvshowcaseTheme
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 @Composable
 fun ExperienceScreen(
     modifier: Modifier = Modifier,
     viewModel: ExperienceViewModel = hiltViewModel(),
 ) {
-    Box(
+    val state by viewModel.uiState.collectAsStateWithLifecycle()
+    Column(
         modifier = modifier
-            .fillMaxSize()
+            .fillMaxWidth()
             .background(MaterialTheme.colorScheme.secondary),
-        contentAlignment = Alignment.TopCenter
     ) {
-        Greeting(name = "Alex")
+        TextField(
+            value = state.query,
+            onValueChange = viewModel::onQueryChange,
+            placeholder = { Text(text = "Search by company name or roles") }
+        )
+        LazyColumn {
+            items(state.filtered) { exp ->
+                ExperienceItem(exp.company, exp.title)
+            }
+        }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        modifier = modifier,
-        text = "$name Resume!",
-        style = MaterialTheme.typography.displayLarge
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CvshowcaseTheme {
-        Greeting("Alex")
+fun ExperienceItem(companyName: String, title: String) {
+    Column {
+        Text(text = companyName)
+        Text(text = title)
     }
 }
+
