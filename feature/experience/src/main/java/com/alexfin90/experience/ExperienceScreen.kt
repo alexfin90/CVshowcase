@@ -161,7 +161,7 @@ fun ExperienceItemPreview() {
     }
 }
 
-@Preview()
+@Preview
 @Composable
 fun ExperienceContentPreview() {
     val sampleState = ExperienceScreenState(
