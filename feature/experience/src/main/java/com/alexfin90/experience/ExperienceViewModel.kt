@@ -76,22 +76,4 @@ class ExperienceViewModel @Inject constructor(
         _uiState.update { it.copy(query = query) }
         queryFlow.value = query
     }
-
-    /*   val uiState: StateFlow<ExperienceScreenState> =
-           observeCvUseCase().flowOn(ioDispatcher).map { cv ->
-               ExperienceScreenState(
-                   items = cv.experiences.map { it.toUiModel() },
-                   filtered = cv.experiences.map { it.toUiModel() },
-               )
-           }.onStart { emit(ExperienceScreenState()) }
-               .catch { e ->
-                   emit(ExperienceScreenState(isLoading = false, error = e.message))
-               }
-               .stateIn(
-                   scope = viewModelScope,
-                   started = SharingStarted.WhileSubscribed(5_000),
-                   initialValue = ExperienceScreenState(isLoading = true)
-               )*/
-
-
 }
