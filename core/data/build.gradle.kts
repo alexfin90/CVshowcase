@@ -23,5 +23,10 @@ android {
 dependencies{
     implementation(project(":$coreModuleName:$commonModuleName"))
     implementation(project(":$coreModuleName:$coreDomainModuleName"))
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.moshi)
+    implementation(libs.moshi.kotlin)
+
 }
 

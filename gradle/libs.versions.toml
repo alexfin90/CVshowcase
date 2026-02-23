@@ -16,26 +16,31 @@ activityCompose = "1.12.3"
 #Google Services
 googleServices = "4.4.4"
 #Compose
-composeBom = "2024.09.00"
-navigationCompose = "2.9.3"
+composeBom = "2026.02.00"
+navigationCompose = "2.9.7"
 #Dependency Injection
 javaInject = "1"
-hilt = "2.57"
-hiltNavigationCompose = "1.2.0"
+hilt = "2.58"
+hiltNavigationCompose = "1.3.0"
 #ksp
 ksp = "2.2.0-2.0.2"
 #Timber
 timber = "5.0.1"
 #Serialization
-serialization = "1.9.0"
+serialization = "1.10.0"
 appcompat = "1.7.1"
 material = "1.13.0"
+
 #ImageLoader
 coilCompose = "3.3.0"
 coilNetworkOkhttp = "3.3.0"
 #Firebase
 firebase-bom = "34.9.0"
 crashlytics = "3.0.6"
+#Retrofit
+retrofit = "3.0.0"
+# Moshi
+moshi = "1.15.2"
 
 [libraries]
 # Android
@@ -79,6 +84,11 @@ firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "fir
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+#Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+#Moshi
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }

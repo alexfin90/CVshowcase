@@ -24,8 +24,6 @@ class CvRepositoryMockImpl @Inject constructor() : CvRepository {
         language = Language()
     )
 
-
-
     override suspend fun getCv(): Cv {
         return cv
     }

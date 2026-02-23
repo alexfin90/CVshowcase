@@ -63,8 +63,6 @@ class ExperienceViewModel @Inject constructor(
     }
 
     fun performSearch(query: String) {
-        //TODO configure Timber
-        Log.d(TAG, "performSearch: $query")
         val q = query.lowercase()
         val filtered = _uiState.value.items.filter { exp ->
             exp.company.lowercase().contains(q) ||
