@@ -1,7 +1,10 @@
 package com.alexfin90.domain.entities
 
 data class Cv(
-    val experiences: List<Experience> = emptyList(),
-    val profile : Profile = Profile(),
-    val language: Language
+    val profile: Profile,
+    val education: List<Education>,
+    val languages: List<Language>,
+    val certifications: List<Certification>,
+    val coreTechnicalCompetencies: Map<String, List<String>>,
+    val experience: List<Experience>
 )

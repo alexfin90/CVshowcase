@@ -1,4 +1,4 @@
-package com.alexfin90.data.remote
+package com.alexfin90.data.remote.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

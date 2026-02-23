@@ -16,8 +16,8 @@ activityCompose = "1.12.3"
 #Google Services
 googleServices = "4.4.4"
 #Compose
-composeBom = "2026.02.00"
-navigationCompose = "2.9.7"
+composeBom = "2024.09.00"
+navigationCompose = "2.9.3"
 #Dependency Injection
 javaInject = "1"
 hilt = "2.58"

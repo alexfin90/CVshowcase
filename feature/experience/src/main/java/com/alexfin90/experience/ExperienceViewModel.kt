@@ -1,6 +1,5 @@
 package com.alexfin90.experience
 
-import android.util.Log
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,7 +7,6 @@ import com.alexfin90.domain.usecases.ObserveCvUseCase
 import com.alexfin90.experience.mappers.toUiModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.toPersistentList
-import kotlinx.collections.immutable.toPersistentSet
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -19,6 +17,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
+
 
 @OptIn(FlowPreview::class)
 @Stable
@@ -44,8 +43,8 @@ class ExperienceViewModel @Inject constructor(
                 _uiState.update { currentState ->
                     currentState.copy(
                         isLoading = true,
-                        items = cv.experiences.map { it.toUiModel() }.toPersistentList(),
-                        filtered = cv.experiences.map { it.toUiModel() }.toPersistentList()
+                        items = cv.experience.map { it.toUiModel() }.toPersistentList(),
+                        filtered = cv.experience.map { it.toUiModel() }.toPersistentList()
                     )
                 }
             }
