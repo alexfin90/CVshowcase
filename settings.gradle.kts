@@ -28,6 +28,8 @@ include(":feature:profile")
 include(":feature:experience")
 include(":feature:skills")
 include(":feature:education")
+include(":feature:detailexperience")
 include(":core:dispatcher")
 include(":core:domain")
 include(":core:data")
+

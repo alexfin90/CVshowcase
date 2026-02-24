@@ -2,6 +2,7 @@ package com.alexfin90.experience
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,14 +34,17 @@ import androidx.compose.material.icons.filled.Search
 fun ExperienceScreen(
     modifier: Modifier = Modifier,
     viewModel: ExperienceViewModel = hiltViewModel(),
+    onItemClick: (String) -> Unit
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     when {
         state.items.isNotEmpty() -> ExperienceContent(
             modifier = modifier,
             state = state,
-            onQueryChange = viewModel::onQueryChange
+            onQueryChange = viewModel::onQueryChange,
+            onItemClick = onItemClick
         )
+
         state.isLoading -> LoadingScreen(modifier = modifier)
         state.error != null -> ErrorButton(error = state.error, modifier = modifier)
     }
@@ -50,7 +54,8 @@ fun ExperienceScreen(
 fun ExperienceContent(
     modifier: Modifier = Modifier,
     state: ExperienceScreenState,
-    onQueryChange: (String) -> Unit = {}
+    onQueryChange: (String) -> Unit = {},
+    onItemClick: (String) -> Unit = {}
 ) {
     Column(
         modifier = modifier
@@ -81,19 +86,25 @@ fun ExperienceContent(
         )
         LazyColumn(Modifier.fillMaxWidth()) {
             items(state.filtered) { exp ->
-                ExperienceItem(exp.company, exp.title)
+                ExperienceItem(
+                    companyName = exp.company, title = exp.title, onItemClick =
+                        onItemClick
+                )
             }
         }
     }
 }
 
 @Composable
-fun ExperienceItem(companyName: String, title: String) {
+fun ExperienceItem(companyName: String, title: String, onItemClick: (String) -> Unit = {}) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.secondary)
             .padding(10.dp)
+            .clickable {
+                onItemClick(title)
+            }
     ) {
         Text(text = companyName, style = MaterialTheme.typography.bodyLarge)
         Text(text = title, style = MaterialTheme.typography.bodyMedium)

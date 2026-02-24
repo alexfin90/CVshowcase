@@ -20,6 +20,7 @@ dependencies{
     implementation(project(":$featureModuleName:$skillsModuleName"))
     implementation(project(":$featureModuleName:$educationModuleName"))
     implementation(project(":$featureModuleName:$experienceModuleName"))
+    implementation(project(":$featureModuleName:$detailExperienceModuleName"))
     //Others dependencies
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)

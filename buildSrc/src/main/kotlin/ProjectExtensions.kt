@@ -84,3 +84,7 @@ val Project.skillsModuleName: String
 val Project.experienceModuleName: String
     get() = findProperty("experienceModuleName") as? String
         ?: error("Property 'experienceModuleName' not found")
+
+val Project.detailExperienceModuleName : String
+    get() = findProperty("detailExperienceModuleName") as? String
+        ?: error("Property 'detailExperienceModuleName' not found")
