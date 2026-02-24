@@ -1,4 +1,4 @@
-package com.alexfin90.cvshowcase.navigation
+package com.alexfin90.common.navigation
 
 import kotlinx.serialization.Serializable
 
@@ -11,5 +11,5 @@ interface Route {
     data object Profile : Route
 
     @Serializable
-    data class DetailExperience(val experienceName : String) : Route
+    data class DetailExperience(val title : String) : Route
 }

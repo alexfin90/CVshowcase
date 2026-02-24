@@ -14,7 +14,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.alexfin90.cvshowcase.navigation.Route
+import com.alexfin90.common.navigation.Route
 import com.alexfin90.designsystem.theme.CvshowcaseTheme
 import com.alexfin90.detailexperience.DetailExperienceScreen
 import com.alexfin90.experience.ExperienceScreen
@@ -54,7 +54,7 @@ private fun CvNavHost(modifier: Modifier = Modifier) {
             ExperienceScreen(
                 modifier = modifier,
                 onItemClick = { title ->
-                    navController.navigate(Route.DetailExperience(title))
+                    navController.navigate(Route.DetailExperience(title = title))
                 }
             )
         }

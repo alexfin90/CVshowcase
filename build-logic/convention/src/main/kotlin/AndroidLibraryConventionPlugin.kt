@@ -15,6 +15,15 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply(libs.findPlugin("android-library").get().get().pluginId)
                 apply(libs.findPlugin("kotlin-android").get().get().pluginId)
                 apply(libs.findPlugin("cvshowcase-hilt").get().get().pluginId)
+                // Apply Kotlin Serialization plugin
+                val serializationPlugin = libs.findPlugin("kotlin.serialization")
+                serializationPlugin.get().apply {
+                    if (isPresent) {
+                        apply(this.get().pluginId)
+                    } else {
+                        logger.warn("The 'org.jetbrains.kotlin.plugin.serialization' plugin was not found. Please ensure it is included in the project dependencies.")
+                    }
+                }
             }
 
             extensions.configure<LibraryExtension> {
@@ -31,7 +40,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
                 add("implementation", libs.findLibrary("androidx-core-ktx").get())
                 add("implementation", libs.findLibrary("timber").get())
-
+                add("implementation", libs.findLibrary("kotlinx-serialization-json").get())
                 add("testImplementation", libs.findLibrary("junit").get())
 
                 add("androidTestImplementation", libs.findLibrary("androidx-junit").get())
