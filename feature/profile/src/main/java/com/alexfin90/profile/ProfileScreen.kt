@@ -72,7 +72,7 @@ fun ProfileItem(companyName: String, title: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.onSecondary)
+            .background(MaterialTheme.colorScheme.secondary)
             .padding(10.dp)
     ) {
         Text(text = companyName, style = MaterialTheme.typography.bodyLarge)
