@@ -39,8 +39,8 @@ class ProfileViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         error = null,
-                        isLoading = false, items = cv.experience.map { it.toUiModel() },
-                        filterItems = cv.experience.map { it.toUiModel() }
+                        isLoading = false, items = cv.experience,
+                        filterItems = cv.experience
                     )
                 }
             }
@@ -65,7 +65,7 @@ class ProfileViewModel @Inject constructor(
     fun performSearch(query: String) {
 
         val filtersItem = _uiState.value.items.filter {
-            it.companyName.contains(query)
+            it.company.contains(query)
                     || it.title.contains(query)
         }
 

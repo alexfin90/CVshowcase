@@ -62,7 +62,7 @@ private fun ProfileScreenContent(
 
         LazyColumn(Modifier.fillMaxWidth()) {
             items(uiState.filterItems) { item ->
-                ProfileItem(companyName = item.companyName, title = item.title)
+                ProfileItem(companyName = item.company, title = item.title)
             }
         }
 
