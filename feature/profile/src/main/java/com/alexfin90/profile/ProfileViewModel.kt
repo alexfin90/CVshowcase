@@ -5,19 +5,22 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alexfin90.domain.usecases.ObserveCv2UseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
+@OptIn(FlowPreview::class)
 @Stable
 @HiltViewModel
 class ProfileViewModel @Inject constructor(
-    private val observeCv2UseCase: ObserveCv2UseCase
+    observeCv2UseCase: ObserveCv2UseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ProfileScreenState())
@@ -48,11 +51,27 @@ class ProfileViewModel @Inject constructor(
 
             }.launchIn(viewModelScope)
 
+        queryFlow.debounce(500L).onEach { query ->
+            performSearch(query)
+        }.launchIn(viewModelScope)
+
     }
 
+    fun onQueryChange(query: String) {
+        _uiState.update { it.copy(query = query) }
+        queryFlow.value = query
+    }
 
+    fun performSearch(query: String) {
 
-    fun onQueryChange(query : String ) {
+        val filtersItem = _uiState.value.items.filter {
+            it.companyName.contains(query)
+                    || it.title.contains(query)
+        }
+
+        _uiState.update {
+            it.copy(filterItems = filtersItem)
+        }
 
     }
 
