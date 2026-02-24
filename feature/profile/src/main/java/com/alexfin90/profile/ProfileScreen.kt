@@ -1,7 +1,5 @@
 package com.alexfin90.profile
 
-import android.graphics.drawable.Icon
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,7 +28,10 @@ fun ProfileScreen(
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     when {
-        uiState.items.isNotEmpty() -> ProfileScreenContent(modifier = modifier, uiState = uiState)
+        uiState.items.isNotEmpty() -> ProfileScreenContent(modifier = modifier,
+            uiState = uiState,
+            onQueryChange = viewModel::onQueryChange
+            )
         uiState.isLoading -> LoadingScreen()
         uiState.error != null -> ErrorScreen()
     }
@@ -38,7 +39,10 @@ fun ProfileScreen(
 }
 
 @Composable
-private fun ProfileScreenContent(modifier: Modifier, uiState: ProfileScreenState) {
+private fun ProfileScreenContent(
+    modifier: Modifier, uiState: ProfileScreenState,
+    onQueryChange: (String) -> Unit = {}
+) {
 
     Column(
         modifier = modifier
@@ -51,9 +55,9 @@ private fun ProfileScreenContent(modifier: Modifier, uiState: ProfileScreenState
         TextField(
             modifier = modifier.fillMaxWidth(),
             value = uiState.query,
-            onValueChange = {},
-            label = {Text("search field")},
-            placeholder = { Text("search by company or title")},
+            onValueChange = onQueryChange,
+            label = { Text("search field") },
+            placeholder = { Text("search by company or title") },
         )
 
         LazyColumn(Modifier.fillMaxWidth()) {

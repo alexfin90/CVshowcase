@@ -52,5 +52,9 @@ class ProfileViewModel @Inject constructor(
 
 
 
+    fun onQueryChange(query : String ) {
+
+    }
+
 
 }
