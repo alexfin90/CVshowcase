@@ -18,6 +18,7 @@ import com.alexfin90.common.navigation.Route
 import com.alexfin90.designsystem.theme.CvshowcaseTheme
 import com.alexfin90.detailexperience.DetailExperienceScreen
 import com.alexfin90.experience.ExperienceScreen
+import com.alexfin90.profile.ProfileScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -54,12 +55,18 @@ private fun CvNavHost(modifier: Modifier = Modifier) {
             ExperienceScreen(
                 modifier = modifier,
                 onItemClick = { title ->
-                    navController.navigate(Route.DetailExperience(title = title))
+                    navController.navigate(Route.Profile)
+                   // navController.navigate(Route.DetailExperience(title = title))
                 }
             )
         }
         composable<Route.DetailExperience> {
             DetailExperienceScreen(modifier = modifier)
+        }
+        composable<Route.Profile> {
+            ProfileScreen(
+                modifier = modifier,
+            )
         }
     }
 }
