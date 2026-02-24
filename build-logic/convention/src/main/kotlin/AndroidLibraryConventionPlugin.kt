@@ -42,7 +42,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 add("implementation", libs.findLibrary("timber").get())
                 add("implementation", libs.findLibrary("kotlinx-serialization-json").get())
                 add("testImplementation", libs.findLibrary("junit").get())
-
+                add("testImplementation", libs.findLibrary("kotlinx-coroutines-test").get())
                 add("androidTestImplementation", libs.findLibrary("androidx-junit").get())
                 add("androidTestImplementation", libs.findLibrary("androidx-espresso-core").get())
 
