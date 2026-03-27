@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     bottomBar = { },
                     topBar = { }
                 ) { innerPadding ->
-                    CvNavHost(modifier = Modifier.padding(paddingValues = innerPadding))
+                    CvshowcaseNavHost(modifier = Modifier.padding(paddingValues = innerPadding))
                 }
             }
         }
@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-private fun CvNavHost(modifier: Modifier = Modifier) {
+private fun CvshowcaseNavHost(modifier: Modifier = Modifier) {
     val navController: NavHostController = rememberNavController()
     NavHost(
         modifier = modifier.fillMaxSize(),
