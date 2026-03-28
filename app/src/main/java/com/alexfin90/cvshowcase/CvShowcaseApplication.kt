@@ -4,14 +4,15 @@ import android.app.Application
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy.Builder
 import android.os.StrictMode.VmPolicy
+import com.alexfin90.cvshowcase.logging.plantTimberTree
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class CvApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        plantTimberTree()
         setStrictModePolicy()
-        //TODO Timber
     }
 }
 
