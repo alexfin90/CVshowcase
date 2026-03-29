@@ -19,12 +19,14 @@ import com.alexfin90.designsystem.theme.CvshowcaseTheme
 import com.alexfin90.detailexperience.DetailExperienceScreen
 import com.alexfin90.experience.ExperienceScreen
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Timber.d("onCreate")
         enableEdgeToEdge()
         setContent {
             CvshowcaseTheme {

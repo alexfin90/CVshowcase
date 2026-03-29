@@ -9,6 +9,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import timber.log.Timber
 import javax.inject.Inject
 
 @Stable
@@ -21,6 +22,7 @@ class DetailExperienceViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     init {
+        Timber.d("init")
         val title: String = savedStateHandle.toRoute<Route.DetailExperience>().title
         _uiState.update {
             it.copy(title = title)

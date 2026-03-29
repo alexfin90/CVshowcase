@@ -17,3 +17,10 @@
 
 # Hide the original source file name in stack traces.
 -renamesourcefileattribute SourceFile
+
+#Firebase
+-keep class com.crashlytics.** { *; }
+-dontwarn com.crashlytics.**
+-keep public class * extends java.lang.Exception
+
+
