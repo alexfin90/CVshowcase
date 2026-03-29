@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
+import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -33,10 +34,10 @@ class ExperienceViewModel @Inject constructor(
 
     companion object {
         private const val DEBOUNCE_TIME = 500L
-        private val TAG = ExperienceViewModel::javaClass.name
     }
 
     init {
+        Timber.d("init")
         observeCvUseCase()
             .onStart { _uiState.update { it.copy(isLoading = true) } }
             .onEach { cv ->

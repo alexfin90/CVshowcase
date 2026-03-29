@@ -1,3 +1,5 @@
+import com.technogym.android.absolute.strength.coreDomainModuleName
+
 plugins {
     alias(libs.plugins.cvshowcase.application)
     alias(libs.plugins.cvshowcase.flavors)
@@ -14,6 +16,7 @@ dependencies{
     //App dependencies
     implementation(project(":$coreModuleName:$designSystemModuleName"))
     implementation(project(":$coreModuleName:$commonModuleName"))
+    implementation(project(":$coreModuleName:$coreDomainModuleName"))
     implementation(project(":$coreModuleName:$coreDataModuleName"))
     //Feature module dependencies
     implementation(project(":$featureModuleName:$profileModuleName"))
