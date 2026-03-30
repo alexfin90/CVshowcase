@@ -32,4 +32,5 @@ include(":feature:detailexperience")
 include(":core:dispatcher")
 include(":core:domain")
 include(":core:data")
+include(":core:logging")
 

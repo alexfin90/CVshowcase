@@ -1,7 +1,19 @@
 package com.alexfin90.cvshowcase.logging
 
-import timber.log.Timber
+import android.util.Log
+import com.alexfin90.logging.Logwood
+import com.alexfin90.logging.redaction.DefaultRedaction
 
 fun plantTimberTree() {
-    Timber.plant(CvShowcaseDebugTree)
+    Logwood.install {
+        policy {
+            minPriority = Log.VERBOSE
+            enabled = true
+        }
+        sinks {
+            logcat()
+            ringBuffer(maxEntries = 500)
+        }
+        redaction(DefaultRedaction())
+    }
 }

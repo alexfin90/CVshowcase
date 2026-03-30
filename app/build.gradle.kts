@@ -18,6 +18,7 @@ dependencies{
     implementation(project(":$coreModuleName:$commonModuleName"))
     implementation(project(":$coreModuleName:$coreDomainModuleName"))
     implementation(project(":$coreModuleName:$coreDataModuleName"))
+    implementation(project(":$coreModuleName:$coreLoggingModuleName"))
     //Feature module dependencies
     implementation(project(":$featureModuleName:$profileModuleName"))
     implementation(project(":$featureModuleName:$skillsModuleName"))
