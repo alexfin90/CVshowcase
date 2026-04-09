@@ -90,6 +90,8 @@ retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter
 #Moshi
 moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
+#Robolectric
+robolectric = { group = "org.robolectric", name = "robolectric", version = "4.14.1" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
