@@ -41,7 +41,7 @@ object CvShowcaseReleaseTree : Timber.Tree() {
             crashlytics.setCustomKey(CRASHLYTICS_KEY_TAG, tag)
             crashlytics.setCustomKey(CRASHLYTICS_KEY_MESSAGE, message)
             crashlytics.setCustomKey(CRASHLYTICS_KEY_ERROR_CODE, t.code)
-            crashlytics.log("$tag: ${t.printStackTrace()}")
+            crashlytics.log("$tag: $message")
             crashlytics.recordException(t)
         } catch (_: IllegalStateException) {
             // Crashlytics not initialized (e.g., mock flavor)
