@@ -1,7 +1,21 @@
 package com.alexfin90.cvshowcase.logging
 
-import timber.log.Timber
+import android.util.Log
+import com.alexfin90.logging.Logwood
+import com.alexfin90.logging.redaction.DefaultRedaction
 
 fun plantTimberTree() {
-    Timber.plant(CvShowcaseReleaseTree)
+    val crashlyticsSink = CrashlyticsSink()
+    Logwood.install {
+        policy {
+            minPriority = Log.WARN
+            enabled = true
+        }
+        sinks {
+            logcat()
+            ringBuffer(maxEntries = 500)
+            add(crashlyticsSink)
+        }
+        redaction(DefaultRedaction())
+    }
 }

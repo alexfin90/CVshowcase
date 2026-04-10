@@ -63,6 +63,10 @@ val Project.designSystemModuleName: String
     get() = findProperty("designSystemModuleName") as? String
         ?: error("Property 'designSystemModuleName' not found")
 
+val Project.coreLoggingModuleName: String
+    get() = findProperty("coreLoggingModuleName") as? String
+        ?: error("Property 'coreLoggingModuleName' not found")
+
 
 
 
